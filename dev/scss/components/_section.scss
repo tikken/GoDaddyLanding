@@ -1,0 +1,202 @@
+.section {
+    background: $section_background;
+    
+    &__wrapper {
+        &--list {
+            padding-bottom: 20px;
+            padding-top: 20px;
+
+            @include flex_center();
+            flex-wrap: wrap;
+
+            @include breakpoint($medium) {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1224px;
+                margin: 0 auto;
+            }
+            .pack {
+                @include breakpoint($medium) {
+                    min-width: 592px;
+                }
+            }
+            &__item {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: 10px;
+                background-color: #fff;
+                border-radius: 1rem;
+                position: relative;
+                overflow: hidden;
+                max-width: 350px;
+                min-height: 206px;
+                align-items: center;
+                
+                @include breakpoint($medium) {
+                    @include flex_center();
+                    flex-direction: column;
+                    width: 285px;
+                    height: 400px;
+                }
+                .overlay {
+                    display: none;
+
+                    @include breakpoint($medium) {
+                        position: absolute;
+                        background: $sale_blue;
+                        @include flex_center();
+                        height: 100%;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                    
+                    &:hover {
+                        opacity: .9;
+                    }
+
+                    &__text {
+                        height: 130px;
+                        width: 130px;
+                        padding: 30px;
+                        background: #fff;
+                        border-radius: 50%;
+                        @include flex_center();
+                        a {
+                            font-family: SansRoundedC;
+                            font-size: 22px;
+                            line-height: 29px;
+                            text-align: center;
+                            color: #000000;
+                        }
+                    }
+                }
+                .image1 {
+                    background: url('/dev/images/section1/toy3.png');
+                }
+                .image3 {
+                    background: url('/dev/images/section1/toy4.png');
+                }
+                .image4 {
+                    background: url('/dev/images/section1/toy6.png');
+                }
+                .image5 {
+                    background: url('/dev/images/section1/toy2.png');
+                }
+                .image6 {
+                    background: url('/dev/images/mob_section1/toy6.png');
+                }
+                .image7 {
+                    background: url('/dev/images/section1/toy5.png');
+                    @include breakpoint($medium) {
+                        width:100%!important;
+                    }
+                }
+                .image {
+                    height: 60%;
+                    width: 100%;
+                    min-height: 150px;
+                    max-height: 227px;
+                    @include bg(contain, center);
+                    @include breakpoint($medium) {
+                        max-height: initial;
+                        margin: 2rem;
+                    }
+                }
+                .image2 {
+                    background: url('/dev/images/hero/toy2.png');
+                    @include bg(contain, center);
+                    max-width: 210px;
+                    max-height: 241px;
+                }
+                .content {
+                    padding: 1rem;
+                    width: 100%;
+
+                    @include breakpoint($medium) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .heading {
+                        @include breakpoint($medium) {
+                            flex: 0 0 100%;
+                        }
+                        span {
+                            font-family: 'Roboto', sans-serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height: 18px;
+                        }
+
+                        margin-bottom: 1rem;
+                    }
+
+                    .price {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        margin-bottom: .5rem;
+                        
+                        .price__new {
+                            font-family: $font;
+                            font-size: 22px;
+                            line-height: 22px;
+                            color: black;
+                        }
+
+                        .price__old {
+                            font-family: 'Roboto', sans-serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #777777;
+                            text-decoration: line-through;
+                            margin-left: 1rem;
+                        }
+                    }
+
+                    .sale {
+                        width: 57.69px;
+                        height: 30px;
+                        background-color: $sale_yellow;
+                        @include flex_center();
+                        margin-bottom: 1rem;
+                        border-radius: 6px;
+                        @include breakpoint($medium) {
+                            margin: 0 0 .5rem 1rem;
+                        }
+                        span {
+                            font-family: 'Roboto', sans-serif;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                    .btn {
+                        width: 150px;
+                        height: 37px;
+                        background-color: $sale_blue;
+                        @include flex_center();
+                        border-radius: 6px;
+                        color: #fff;
+
+                        a {
+                            font-family: $font;
+                            font-size: 15px;
+                            line-height: 20px;
+                            text-align: center;
+                        }
+                        @include breakpoint($medium) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}

@@ -1,0 +1,57 @@
+@mixin breakpoint ($width1, $width2: 0) {
+    @if ($width2 > 0) {
+      @media screen and (min-width: $width1) and (max-width: $width2) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $width1) {
+        @content;
+      }
+    }
+  }
+
+  @mixin bg($size: cover, $pos: center) {
+    background-repeat: no-repeat ;
+    background-position: #{$pos};
+    background-size: #{$size};
+  }
+  
+  @mixin padding-hack ($padding: 100%, $after: true) {
+    @if ($after) {
+      &:after {
+        content: '';
+        display: block;
+        padding-top: $padding;
+      }
+    } @else {
+      &:before {
+        content: '';
+        display: block;
+        padding-top: $padding;
+      }
+    }
+  }
+
+  @mixin flex_center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin underline($color, $opacity, $top) {
+      &:hover {
+        &:after {
+            width: 100%;
+        }  
+      }
+      &:after {
+          content: '';
+          width: 0;
+          display: block;
+          background: $color;
+          height: 2px;
+          transition: width .2s;
+          opacity: $opacity;
+          margin-top: $top;
+      }
+  }

@@ -1,0 +1,169 @@
+  .header {
+    width: 100%;
+    z-index: 12;
+    max-height: 100px;
+    height: 75px;
+    position: absolute;
+    background: $menu_bg;
+
+    @include breakpoint($medium) {
+      height: 121px;
+    }
+    .logo {
+     
+      .desktop_menu {
+        ul {
+          display: flex;
+          li {
+            @include underline(#fff, 1, 4px);
+            margin: 0 1rem;
+            color: #fff;
+            font-size: 20px;
+            flex-direction: column;
+
+            a {
+              padding: 0;
+              font-size: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: $menu_bg;
+  }
+  .header li {
+    display: flex;
+    justify-content: center;
+    .menu_contacts {
+        display: flex;
+        align-items: center;
+        margin-top: 8rem;
+        
+        .icon {
+          background-image: url('/dev/images/icon/white_tel.png');
+          height: 36px;
+          width: 23px;
+          margin-bottom: .24rem;
+          @include bg(contain, center);
+        }
+        .tel {
+          color: #fff;
+          font-family: $font;
+          font-size: 28px;
+          line-height: 56px;
+          margin-left: 1rem;
+        }
+    }
+  }
+  .header li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+  }
+  
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+  .header .menu {
+    clear: both;
+    transition: height .2s ease-out;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    top: 74px;
+    padding-top: 20%;
+
+    li {
+      display: none;
+    }
+  }
+  .header .menu-btn:checked ~ .menu {
+    background: $menu_bg;
+    height: 100vh;
+    li {
+      display: flex;
+    }
+  }
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    outline: 0;
+  }
+  .header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 33px;
+  }
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  .header .menu-icon .navicon:before {
+    top: 10px;
+  }
+  .header .menu-icon .navicon:after {
+    top: -10px;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+  @media (min-width: 768px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  

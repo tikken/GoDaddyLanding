@@ -1,0 +1,39 @@
+$mobile: 320px;
+$fablet: 480px;
+$tablet: 768px;
+$medium: 1024px;
+$laptop: 1240px;
+$desktop: 1520px;
+
+$layout_width: 1200px;
+
+$white: #fff;
+$logo_text: #FF0090;
+$gray_text: #777777;
+
+$sale_blue: #2250CF;
+$sale_yellow: #FFDE03;
+
+$form_bg:#F2F6FA;
+
+$hero_bg: linear-gradient(90deg, #FDB2C8 33.13%, #FE77B5 98.13%);
+$menu_bg: linear-gradient(89.43deg, #FDB2C8 4.42%, #FE77B5 102.47%);
+$hover_blue: #2250CF;
+
+$section_background: #F2F6FA;
+$overlay:#AB819E;
+
+$button_blue:  #2250CF;
+$bullet:  #FF0090;
+
+$popup_decor:  #FEB3C8;
+$popup_decor2: #FFDE03;
+
+$decor_blue: #436AD6;
+
+@font-face {
+    font-family: 'SansRoundedC';
+    src: url('/dev/fonts/SansRoundedC.otf');
+}
+
+$font: 'SansRoundedC', sans-serif;

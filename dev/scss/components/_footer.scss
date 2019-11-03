@@ -1,0 +1,90 @@
+footer {
+    background: #fff;
+    // position: fixed;
+    bottom: 0;
+    width: 100%;    
+
+    .footer__wrapper {
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        min-height: 7rem;
+
+        @include breakpoint($medium) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer__wrapper--item {
+            .copyright {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                line-height: 18px;
+                color: $gray_text;
+                padding-bottom: 1rem;
+                opacity: .7;
+                @include breakpoint($medium) {
+                    padding: 0;
+                    margin-left: 0.5rem;
+                }
+            }
+            .tel {
+                font-family: 'SansRoundedC', sans-serif;
+                font-size: 30px;
+                color: #000000;
+                line-height: 3rem;
+            }
+            .menu {
+                margin-bottom: 1rem;
+                @include breakpoint($medium) {
+                    margin:0;
+                }
+                ul {
+                    @include breakpoint($medium) {
+                        display: flex;
+                        li {
+                            margin: 0 1rem;
+                        }
+                    }
+                    li {
+                        a {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 17px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: $gray_text;
+                            opacity: .7;
+                            @include breakpoint($medium) {
+                                @include underline($gray_text, .7, 0);
+                            }
+                        }
+                    }
+                }                
+            }
+            .footer__logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 1rem;
+                @include breakpoint($medium) {
+                    padding: 0;
+                }
+                .logo__text {
+                    font-family: $font;
+                    color: $logo_text;
+                    transform: rotate(-3.22deg);
+                    font-size: 42px;
+                    padding-top: 1.5rem;
+                    margin-right: .5rem;
+                }
+                .logo__image {
+                    background-image: url('/dev/images/logo/logo.png');
+                    height: 50px;
+                    width: 105px;
+                    @include bg(contain, center);
+                }
+            }
+        }
+    }
+}

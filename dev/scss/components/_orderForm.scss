@@ -1,0 +1,135 @@
+.order {
+    padding: 0 30px;
+    // max-height: 599px;
+    // overflow: scroll;
+    .order__wrapper {
+        .order__wrapper--form {
+            .form-group {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .main_button {
+                  color: #fff;
+                }
+                .g-recaptcha {
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+                }
+                .checkbox {
+                    display: block;
+                    float: none;
+                    clear: left;
+                    position: relative;
+                    padding: 0 0 0 38px;
+                    width: auto;
+                    margin-bottom: 1rem;
+
+                    label {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #000000;
+                        span {
+                            color: $decor_blue;
+                        }
+                    }
+                  }
+                  .checkbox [type="checkbox"] {
+                    position: absolute;
+                    cursor: pointer;
+                    left: 0;
+                    top: 0;
+                    width: 25px;
+                    height: 25px;
+                    z-index: 1;
+                    margin: 0;
+                    zoom: 1;
+                    opacity: 0;
+                    padding: 0;
+                  }
+                  .checkbox [type="checkbox"] + label:before {
+                    content: "";
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #fff;
+                    border-radius: 4px;
+                  }
+                  .checkbox [type="checkbox"] + label {
+                    cursor: pointer;
+                    float: left;
+                    min-height: inherit;
+                    white-space: initial;
+                  }
+                  .checkbox [type="checkbox"] + label:after {
+                    content: "";
+                    border: solid;
+                    border-width: 0 0 3px 3px;
+                    background: transparent;
+                    border-top-color: transparent;
+                    width: 22px;
+                    height: 12px;
+                    position: absolute;
+                    top: -4px;
+                    left: 2px;
+                    transform: rotate(-45deg);
+                    zoom: 1;
+                    opacity: 0;
+                  }
+                  .checkbox [type="checkbox"]:checked + label:after {
+                    zoom: 1.1;
+                    opacity: 1;
+                  }
+                  .checkbox [type="checkbox"]:checked + label:before,
+                  .checkbox [type="checkbox"]:checked + label:after {
+                    border-color: $decor_blue;
+                  }
+
+                .heading {
+                    text-align: center;
+                    font-family: 'SansRoundedC', sans-serif;
+                    font-size: 28px;
+                    line-height: 34px;
+                    text-align: center;
+                    color: #000000;
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+                }
+                .form-control {
+                    background: #fff;
+                }
+                .button {
+                    font-family: $font;
+                    font-size: 22px;
+                    line-height: 29px;
+                    text-align: center;
+                    margin-bottom: 4rem;
+                }
+                input {
+                    display: block;
+                    background: $sale_blue;
+                    color: black;
+                    border-radius: 50px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    margin-bottom: 15px;
+                    border: none;
+                    width: 100%;
+                    font-size: 17px;
+                    outline: none;
+
+                    &::placeholder {
+                        color: #777777;
+                        font-size: 17px;
+                        line-height: 20px;
+                        font-family: 'Roboto', sans-serif;
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+}

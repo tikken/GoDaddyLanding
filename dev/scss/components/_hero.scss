@@ -1,0 +1,227 @@
+.hero {
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+
+    @include breakpoint($medium) {
+        overflow: hidden;
+    }
+    
+    .desktop__images {
+        padding-top: 121px;
+        width: $layout_width;
+        margin: 0 auto;
+        position: relative;
+        display: none;
+        @include breakpoint($medium) {
+            display: block;
+        }
+        .text {
+            h1 {
+                font-family: $font;
+                font-size: 60px;
+                line-height: 74px;
+                text-align: center;
+                color: #FFFFFF;
+                position: absolute;
+                top: 7rem;
+                right: 10rem;
+            }
+            span {
+                font-family: 'Roboto',sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                color: #FFFFFF;
+                position: absolute;
+                top: 7rem;
+                right: 10rem;
+                top: 19rem;
+                right: 13.5rem;
+                width: 36%;
+            }
+        }
+        .decor1 {
+            width: 128px;
+            height: 128px;
+            position: absolute;
+            @include bg(cover,center);
+            top: 23rem;
+            background-image: url('/dev/images/hero/Ellipse1.png');
+            z-index: 10;
+        }
+        .decor2 {
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            @include bg(cover,center);
+            top: 8rem;
+            right: -9rem;
+            background-image: url('/dev/images/hero/Ellipse2.png');
+            z-index: 10;
+        }
+        .decor3 {
+            width: 106px;
+            height: 50px;
+            position: absolute;
+            @include bg(cover,center);
+            top: 41rem;
+            right: -3rem;
+            background-image: url('/dev/images/hero/Vector.png');
+            z-index: 10;
+        }
+        .decor4 {
+            width: 106px;
+            height: 50px;
+            position: absolute;
+            @include bg(cover,center);
+            top: 12rem;
+            left: -4rem;
+            background-image: url('/dev/images/hero/Vector.png');
+            z-index: 10;
+        }
+        .sale {
+            background-image: url('/dev/images/hero/sale.png');
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: 8.5rem;
+            top: 34rem;
+            @include bg(cover,center);
+        }
+        .toy {
+            position: absolute;
+            width: 180px;
+            height: 213px;
+            background-image: url('/dev/images/hero/toy.png');
+            @include bg(cover,center);
+            top: 23rem;
+            left: -93px;
+            z-index: 15;
+        }
+        .toy2 {
+            position: absolute;
+            height: 389px;
+            width: 389px;
+            background-image: url('/dev/images/hero/toy2.png');
+            @include bg(cover,center);
+            top: 27rem;
+            right: 19rem;
+        }
+        .toy3 {
+            position: absolute;
+            height: 398px;
+            width: 336px;
+            background-image: url('/dev/images/hero/toy3.png');
+            @include bg(cover,center);
+            top: 12rem;
+            right: -17rem;
+        }
+        .girl {
+            width: 100vw;
+            height: 100vh;
+            max-height: 730px;
+            max-width: 750px;
+            background-image: url('/dev/images/hero/girl.png');
+            @include bg(contain, center);
+        }
+    }
+    .images {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        max-width: 320px;
+        margin: 0 auto;
+        @include breakpoint($medium) {
+            display: none;
+        }
+
+        &_wrapper {
+            height: 320px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+
+            .girl {
+                background-image: url('/dev/images/hero/girl.png');
+                height: 79%;
+                width: 78%;
+                position: absolute;
+                bottom: 0;
+                left: -6%;
+                @include bg();
+             }
+             .toy {
+                 background-image: url('/dev/images/hero/toy3.png');
+                 height: 100px;
+                 top: 47px;
+                 width: 100px;
+                 @include bg();
+                 bottom: 0;
+                 position: absolute;
+                 transform: rotate(30deg);
+                 left: -10%;
+             }
+             .toy2 {
+                 background-image: url('/dev/images/hero/toy2.png');
+                 @include bg();
+                 height: 144px;
+                 width: 136px;
+                 position: absolute;
+                 bottom: 4.5%;
+                 right: -2%;
+                 z-index: 10;
+             }
+             .decor {
+                background-image: url('/dev/images/icon/hero_decor.png');
+                @include bg(contain, center);
+                width: 69px;
+                height: 50px;
+                left: 208px;
+                top: 20px;
+                position: absolute;
+                z-index: 9;
+                left: 49%;
+             }
+             .circle {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                background: #2250cf;
+                position: absolute;
+                top: 27%;
+                right: .7rem;
+                z-index: 11;
+
+                 .love {
+                     background-image: url('/dev/images/icon/love.png');
+                     @include bg();
+                     height: 45px;
+                     width: 40px;
+                     position: absolute;
+                     left: 33%;
+                     top: 11%;
+                 }
+                 .sale, .text {
+                    color: #fff;
+                    font-family: $font;
+                 }
+                 .sale {
+                    top: 49%;
+                    font-size: 28px;
+                    left: 23%;
+                    position: absolute;
+                 }
+                 .text {
+                    font-size: 11px;
+                    margin-left: 2.2rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: -1px;
+                 }
+             }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.hero_text_wrap {
+    font-family: $font;
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 340px;
+    
+    @include breakpoint($medium) {
+        display: none;
+    }
+    .heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+    }
+    .text {
+        font-size: 17px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        width: 85%;
+        margin: 0 auto;
+        line-height: 24px;
+        margin-top: 1rem;
+    }
+}

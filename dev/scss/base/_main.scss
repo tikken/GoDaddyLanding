@@ -1,0 +1,50 @@
+// Unclassed
+html {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 !important;
+    overflow-x: hidden;
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  body {
+    transition: opacity .2s 0.25s ease;
+    background: $section_background;
+    overflow-x: hidden;
+
+    &.app-load {
+      opacity: 1 !important;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+// Layout
+  .main {
+    padding-top: 45px;
+    @include breakpoint($laptop) {
+      padding-top: 60px;
+    }
+  }
+  .overlay {
+    height: 125vh;
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    opacity: 0;
+    background-color: white;
+    z-index: 0;
+    .menu-open & {
+      left: 0;
+      opacity: 0.5;
+    }
+  }

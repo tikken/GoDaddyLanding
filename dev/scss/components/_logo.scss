@@ -1,0 +1,43 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and(min-width: 765px){
+        justify-content: space-around;
+    }
+    @include breakpoint(1230px) {
+        max-width: $layout_width;
+        justify-content: space-between;
+    }
+
+    .desktop_menu {
+        display: none;
+        @media screen and (min-width: 765px){
+            display: block;
+        }
+    }
+    .logo_link {
+        display: flex;
+        align-items: center;
+        width: 194px;
+        height: 100%;
+        .logo_text {
+            font-family: $font;
+            color: $logo_text;
+            transform: rotate(-3.22deg);
+            font-size: 40px;
+            margin-right: .5rem;
+            margin-top: 1rem;
+        }
+        .logo_image {
+            background-image: url('/dev/images/logo/logo.png');
+            height: 55px;
+            width: 105px;
+            @include bg();
+        }
+    }
+}

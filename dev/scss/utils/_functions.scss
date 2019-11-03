@@ -1,0 +1,23 @@
+.overflow {
+    overflow-y: hidden;
+}
+.as-none {
+    display: none!important;
+}
+.block_scroll {
+    position: absolute;
+    height: 120vh;
+
+    @include breakpoint($medium) {
+        position: fixed;
+        max-height: initial;
+    }
+    width: 100%;
+    overflow: hidden;
+}
+.completly_block {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}

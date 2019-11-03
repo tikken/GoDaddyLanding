@@ -1,0 +1,48 @@
+.payments {
+    background: $section_background;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    
+    @include breakpoint($medium) {
+        padding: 0;
+    }
+    
+    &__wrapper {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+
+        .main__heading {
+            font-family: $font;
+            font-size: 42px;
+            line-height: 56px;
+            margin: 2rem 0;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 1rem;
+        }
+        .text {
+            font-size: 17px;
+            line-height: 24px;
+            padding-bottom: 0;
+        }
+        .payments__variants {
+            .heading {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 28px;
+                margin: 2rem 0;
+            }
+            .text {
+                font-size: 17px;
+                line-height: 24px;
+                padding-bottom: 6rem;
+            }
+        }
+    }
+}

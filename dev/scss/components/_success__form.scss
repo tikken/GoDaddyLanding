@@ -1,0 +1,80 @@
+.success__form {
+        width: 100%;
+        height: 550px;
+        @include flex_center();
+        overflow: hidden;
+        position: relative;
+        @include breakpoint($medium) {
+            width: 794px;
+        }
+        
+    .decor1 {
+        position: absolute;
+        background-image: url('/dev/images/contacts/decor.png');
+        @include bg(contain, center);
+        height: 100px;
+        width: 100px;
+        top: 1rem;
+        right: 7rem;
+    }
+    .decor2 {
+        position: absolute;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        top: 5rem;
+        left: 5rem;
+        background: $popup_decor2;
+    }
+    .decor3 {
+        position: absolute;
+        width: 231px;
+        height: 231px;
+        background: $popup_decor;
+        border-radius: 50%;
+        bottom: -25%;
+        right: 2rem;
+    }
+    .success__form--heading {
+        font-family: $font;
+        font-size: 30px;
+        line-height: 56px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 4rem;
+    }
+    &--content {
+        padding: 30px;
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+        .text {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 24px;
+            text-align: center;
+            color: #000000;
+            margin: 0 0 3rem 0;
+        }
+        .close {
+            background: $sale_blue;
+            border-radius: 50px;
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+            margin: 2rem;
+            font-family: $font;
+            font-size: 22px;
+            line-height: 29px;
+            text-align: center;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}

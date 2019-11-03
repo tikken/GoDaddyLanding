@@ -1,0 +1,96 @@
+.item {
+    background: #fff;
+
+    .item__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 1rem;
+        margin-bottom: 3rem;
+
+        .image {
+            height: 160px;
+            width: 160px;
+            background-image: url('/dev/images/mob_section1/toy2.png');
+            @include bg(contain, center);
+            margin-right: 1rem;
+            @include breakpoint($medium) {
+                flex: 1;
+            }
+        }
+        .content {
+            @include breakpoint($medium) {
+                flex: 1;
+            }
+            .heading__popup {
+                span {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+
+                margin-bottom: 1rem;
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                margin-bottom: .25rem;
+                
+                .price__new {
+                    font-family: $font;
+                    font-size: 22px;
+                    line-height: 22px;
+                    color: black;
+                }
+
+                .price__old {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #777777;
+                    text-decoration: line-through;
+                    margin-left: 1rem;
+                }
+            }
+
+            .sale {
+                width: 57.69px;
+                height: 30px;
+                background-color: $sale_yellow;
+                @include flex_center();
+                margin-bottom: 1rem;
+                border-radius: 6px;
+                span {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+            .btn {
+                width: 150px;
+                height: 37px;
+                background-color: $sale_blue;
+                @include flex_center();
+                border-radius: 6px;
+                color: #fff;
+
+                span {
+                    font-family: $font;
+                    font-size: 15px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

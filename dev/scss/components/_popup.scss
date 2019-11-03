@@ -1,0 +1,162 @@
+.mfp-bg {
+    background: #AB819E;
+}
+
+.mfp-container {
+    // padding-left: 15px;
+    // padding-right: 15px;
+    padding: 0;
+
+    .mfp-content {
+        .order {
+            @include breakpoint($medium) {
+                max-height: 866px;
+            }
+            overflow: hidden;
+            height: 100%;
+
+            .mfp-close {
+                right: 0;
+                top: .95rem;
+                @include breakpoint($medium) {
+                    right: .5rem;
+                    display: none;
+                }
+            }
+            .order__form--wrapper {
+                .form-group {
+                    max-width: 400px;
+                    margin: 0 auto;
+                    .button {
+                        height: 48px;
+                        font-size: 18px;
+                        padding:0;
+                    }
+                    &:first-child {
+                        max-width: initial;
+                    }
+                    
+                    .heading_form {
+                        padding: 0;
+                        font-size: 30px;
+                        line-height: 34px;
+                        padding: 1rem .5rem;
+                        @include breakpoint($medium) {
+                            padding: 1rem;
+                        }
+                    }
+                    .form-control {
+                        margin-bottom: 10px;
+                        max-width: 400px;
+                        padding: 1rem 2rem;
+                    }
+                }
+                .heading {
+                    padding: 0;
+                    padding-top: .5rem;
+                    @media screen and (max-width: $medium){
+                        span {
+                            font-size: 28px;
+                        }
+                    }
+                    @include breakpoint($medium) {
+                        padding: 2.5rem;
+                        padding-bottom: 1.5rem;
+                        max-height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .item {
+                    @include breakpoint($medium) {
+                        padding: 1rem;
+                    }
+                    .item__wrapper {
+                        padding-bottom: 0;
+                        .image {
+                            height: 158px;
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+        .item {
+            .item__wrapper {
+                padding: 0;
+                margin: 0;
+                margin: 0 auto;
+                padding-bottom: 3rem;
+
+                @include breakpoint($medium) {
+                    width: 450px;
+                }
+
+                .content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .heading__popup {
+                        width: 100%;
+                    }
+                    .sale {
+                        margin: 0 0 0 1rem;
+                    }
+                    .btn {
+                        display: none;
+                    }
+                .heading {
+                    text-align: left;
+                    padding: 0;
+                  }
+                }
+            }
+        }
+        .heading, .heading_form {
+            font-family: $font;
+            font-size: 30px;
+            line-height: 56px;
+            text-align: center;
+            color: #000000;
+            background: #fff;
+            padding: 2rem 0;
+        }
+        .heading_form {
+            background: $section_background;
+            text-align: center;
+            width: 100%;
+        }
+        .order {
+            background: $section_background;
+            max-width: 794px;
+            margin: 0 auto;
+            padding: 0!important;
+
+            @include breakpoint($medium) {
+                border-radius: 2rem;
+            }
+            
+            &__wrapper {
+                .order__wrapper--form {
+                    padding: 0 1rem;
+
+                    @include breakpoint($medium) {
+                        padding: 0 3rem;
+                    }
+                    .heading {
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+    .mfp-bg {
+        height: 100vh!important;
+    }
+}
+
+.mfp-wrap {
+    @media screen and (max-width: $medium){
+        top: initial!important;
+    }
+}

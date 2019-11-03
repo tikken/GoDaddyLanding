@@ -1,0 +1,147 @@
+.section2 {
+    background: $section_background;
+    
+    @include breakpoint($medium) {
+        display: flex;
+        max-width: 773px;
+        margin: 0 auto;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    &__text--heading {
+        font-family: $font;
+        font-size: 17px;
+        line-height: 29px;
+        color: #000;
+        width: 100%;
+        padding: 0 30px;
+        
+        @include breakpoint($medium) {
+            padding: 20px 0;
+            font-size: 42px;
+            line-height: 56px;
+            flex: 0 0 100%;
+        }
+    }  
+    .section2__text {
+        padding: 0 30px;
+
+        @include breakpoint($medium) {
+            flex: 1;
+            padding: 0 30px;     
+        }
+        &--list {
+            position: relative;
+            z-index: 99;
+            @include breakpoint($medium) {
+                margin-bottom: 123px;
+            }
+            ul {
+                margin: 1rem;
+                
+                li:before {
+                    content: "•";
+                    color: $bullet; 
+                    font-size: 36px;
+                    display: inline-block;
+                    position: absolute;
+                    left: -2rem;
+                }
+                li {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 17px;
+                    line-height: 24px;
+                    margin-bottom: 1rem;
+                    position: relative;
+                }
+            }
+        }
+    }
+    .trash_images {
+        display: none;
+        position: absolute;
+        right: 0;
+        @include breakpoint($medium) {
+            display: block;
+        }
+        @include breakpoint(1450px) {
+            right: 13rem;
+        }
+    }
+    .section2__images {
+        height: 244px;
+        overflow-y: hidden;
+        position: relative;
+        margin: 0 auto;
+        max-width: 350px;
+
+        @include breakpoint($medium) {
+            flex: 1;
+            height: 257px;
+            opacity:0;
+        }
+        .girl__wrapper {
+            height: 350px;
+            position: relative;
+
+            .girl {
+                background-image: url('/dev/images/mob_section2/girl.png');
+                @include bg(contain,center);
+                height: 100%;
+                margin: 0 auto;
+                width: 72%;
+                margin-top: 1rem;
+            }
+        }
+        .doll1 {
+            background-image: url('/dev/images/mob_section2/toy3.png');
+            @include bg(contain, center);
+            height: 75px;
+            width: 75px;
+            bottom: 2.5rem;
+            left: 1rem;
+            position: absolute;
+            z-index: 10;
+        }
+        .doll2 {
+            background-image: url('/dev/images/mob_section2/toy.png');
+            @include bg();
+            height: 90px;
+            width: 90px;
+            position: absolute;
+            left: .5rem;
+            top: 41px;
+        }
+        .doll3 {
+            background-image: url('/dev/images/mob_section2/toy2.png');
+            @include bg();
+            height: 90px;
+            width: 90px;
+            position: absolute;
+            right: 26px;
+            top: 5.75rem;
+            z-index: 11;
+
+            &:after {
+                content: "•";
+                color: $decor_blue; 
+                font-size: 24px;
+                display: inline-block;
+                position: absolute;
+                left: 3.4rem;
+                top: 113%;
+            }
+        }
+        .decor {
+            background-image: url('/dev/images/mob_section2/decor.png');
+            @include bg(contain, center);
+            width: 62px;
+            height: 34px;
+            position: absolute;
+            top: 23px;
+            right: 5rem;
+        }
+    }
+}
