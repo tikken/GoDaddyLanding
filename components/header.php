@@ -18,12 +18,12 @@
   <div class="menu">
     <ul>
       <li><a href="/">Главная</a></li>
-      <li><a href="/delivery">Доставка и оплата</a></li>
-      <li><a href="/contacts">Контакты</a></li>
+      <li><a href="/delivery.php">Доставка и оплата</a></li>
+      <li><a href="/contacts.php">Контакты</a></li>
       <li>
         <span class="menu_contacts">
             <div class="icon"></div>
-            <div class="tel">+7 911 555-12-12</div>
+            <!-- <div class="tel">+7 911 555-12-12</div> -->
         </span>
       </li>
     </ul>

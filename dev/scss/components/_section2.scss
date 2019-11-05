@@ -1,8 +1,21 @@
 .section2 {
     background: $section_background;
+    position: relative;
+    margin: 0 auto;
     
+    @include breakpoint(600px) {
+        max-width: 600px;
+        
+        .section__wrapper--list__item {
+            max-width: 280px;
+        }
+    }
+    @include breakpoint(700px) {
+        max-width: 709px;
+    }
     @include breakpoint($medium) {
         display: flex;
+        max-width: 900px;
         max-width: 773px;
         margin: 0 auto;
         align-items: flex-end;
@@ -10,7 +23,7 @@
     }
     &__text--heading {
         font-family: $font;
-        font-size: 17px;
+        font-size: 21px;
         line-height: 29px;
         color: #000;
         width: 100%;
@@ -62,12 +75,12 @@
     .trash_images {
         display: none;
         position: absolute;
-        right: 0;
+        right: -12rem;
+        
         @include breakpoint($medium) {
             display: block;
         }
         @include breakpoint(1450px) {
-            right: 13rem;
         }
     }
     .section2__images {

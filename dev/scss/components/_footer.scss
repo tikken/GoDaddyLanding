@@ -10,6 +10,10 @@ footer {
         font-weight: normal;
         min-height: 7rem;
 
+        // position: absolute;
+        // bottom: 0;
+        // width: 100%;
+
         @include breakpoint($medium) {
             display: flex;
             justify-content: space-around;

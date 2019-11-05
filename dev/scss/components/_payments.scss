@@ -5,9 +5,11 @@
     padding: 0 30px;
     
     @include breakpoint($medium) {
+        padding: 0 30px;
+    }
+    @include breakpoint(1230px) {
         padding: 0;
     }
-    
     &__wrapper {
         color: black;
         font-family: 'Roboto', sans-serif;

@@ -35,6 +35,7 @@
 		 */
 		_listener: function () {
 		  $(document).ready(this._initialization.bind(this));
+		  
 		  $(this._selectors.popup_trigger).on('click', this._getSelectedItem.bind(this));
 		  $(this._selectors.menuTrigger).on('click', this._blockScroll.bind(this));
 		  $(this._selectors.closePopup).on('click', this._handle_close.bind(this));
@@ -43,9 +44,19 @@
 		},
 		//utils
 		_getSelectedItem: function(e) {
+			
 			var item = e.target.dataset.image;
 			var destionation = $('#test-form').find('.image')[0];
 			destionation.style.backgroundImage = 'url(' + item + ')';
+
+			var price = e.target.dataset.price;	
+			var oldPrice = e.target.dataset.priceold;
+
+			$('#test-form').find('.price__new')[0].children[0].textContent = price;
+			$('#test-form').find('.price__old')[0].children[0].textContent = oldPrice;
+
+			var title = e.target.dataset.title;
+			$('#test-form').find('.heading__popup')[0].children[0].textContent = title;
 		},
 		_removeBorder: function(e) {
 			$(e.target).css('border', '');

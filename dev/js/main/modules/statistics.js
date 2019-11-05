@@ -34,14 +34,18 @@
          */
         simpleStat: function (id) {
           try {
-            window.yaCounter56056423.hit({'preorder:': 'order'});
-            console.log('ya++');
+            window.ym(56056423, 'reachGoal', 'preorder');
+            console.log('ya+');
           } catch(e) {
             console.error('yandex counter stat failed');
           }
           try {
-            ga('send','event', 'preorder', 'preorder');
-            console.log('ga++');
+            gtag('event','preorder', {
+              'event_category': 'preorder',
+              'event_label': 'preorder',
+              'value': '1'
+            });
+            console.log('ga+');
           } catch(e) {
             console.error('google analytics failed');
           }

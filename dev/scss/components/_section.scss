@@ -6,14 +6,38 @@
             padding-bottom: 20px;
             padding-top: 20px;
 
+            max-width: 740px;
+            margin: 0 auto;
+
             @include flex_center();
             flex-wrap: wrap;
+            max-width: 740px;
+            justify-content: center;
 
+            @include breakpoint(600px) {
+                justify-content: flex-start;
+                max-width: 600px;
+                
+                .section__wrapper--list__item {
+                    max-width: 280px;
+                }
+            }
+            @include breakpoint(700px) {
+                justify-content: flex-start;
+                max-width: 700px;
+
+                .section__wrapper--list__item {
+                    max-width: 330px;
+                }
+            }
             @include breakpoint($medium) {
                 display: flex;
                 flex-wrap: wrap;
-                max-width: 1224px;
+                max-width: 917px;
                 margin: 0 auto;
+            }
+            @include breakpoint(1236px) {
+                max-width: 1222px;
             }
             .pack {
                 @include breakpoint($medium) {
@@ -64,7 +88,7 @@
                         background: #fff;
                         border-radius: 50%;
                         @include flex_center();
-                        a {
+                        span {
                             font-family: SansRoundedC;
                             font-size: 22px;
                             line-height: 29px;
@@ -94,14 +118,23 @@
                         width:100%!important;
                     }
                 }
+                .image8 {
+                    background: url('/dev/images/section1/toy8.png');
+                }
+                .image9 {
+                    background: url('/dev/images/section1/toy9.png');
+                }
                 .image {
-                    height: 60%;
+                    height: 50%;
                     width: 100%;
                     min-height: 150px;
                     max-height: 227px;
+                    margin: 0.5rem;
+                    flex-basis: 60%;
+                    
                     @include bg(contain, center);
                     @include breakpoint($medium) {
-                        max-height: initial;
+                        max-height: 200px;
                         margin: 2rem;
                     }
                 }
@@ -113,11 +146,11 @@
                 }
                 .content {
                     padding: 1rem;
-                    width: 100%;
-
+                    width: 100%;                    
                     @include breakpoint($medium) {
                         display: flex;
                         flex-wrap: wrap;
+                        padding: 0 0 0 1.5rem;
                     }
                     .heading {
                         @include breakpoint($medium) {
@@ -156,6 +189,7 @@
                             color: #777777;
                             text-decoration: line-through;
                             margin-left: 1rem;
+                            margin-bottom: .2rem;
                         }
                     }
 
@@ -164,8 +198,9 @@
                         height: 30px;
                         background-color: $sale_yellow;
                         @include flex_center();
-                        margin-bottom: 1rem;
                         border-radius: 6px;
+                        margin-bottom: 1rem;
+
                         @include breakpoint($medium) {
                             margin: 0 0 .5rem 1rem;
                         }
